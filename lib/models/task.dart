@@ -5,7 +5,7 @@ const Uuid uuid = Uuid();
 class Task {
   final String id;
   final String task;
-  final bool isDone;
+  bool isDone;
 
   Task({
     required this.task,
