@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:todo/widgets/task_item.dart';
 
 import '../providers/task_data_provider.dart';
 
@@ -23,7 +24,23 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Consumer<TaskDataProvider>(
         builder: (context, value, child) => Column(
-          children: value.tasks.map((e) => Text(e.task)).toList(),
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 10, bottom: 10),
+              child: Text(
+                '1 Tasks',
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+            ),
+            Column(
+              children: value.tasks
+                  .map(
+                    (e) => TaskItem(title: e.task),
+                  )
+                  .toList(),
+            ),
+          ],
         ),
       ),
     );
