@@ -12,4 +12,9 @@ class TaskDataProvider extends ChangeNotifier {
   ];
 
   int get count => tasks.length;
+
+  void addTask(Task task) {
+    tasks.add(task);
+    notifyListeners();
+  }
 }
