@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 10, bottom: 10),
               child: Text(
-                '1 Tasks',
+                '${value.count} Tasks',
                 style: Theme.of(context).textTheme.titleMedium,
               ),
             ),

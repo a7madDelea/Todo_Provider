@@ -10,4 +10,6 @@ class TaskDataProvider extends ChangeNotifier {
     Task(task: 'task4'),
     Task(task: 'task5'),
   ];
+
+  int get count => tasks.length;
 }
