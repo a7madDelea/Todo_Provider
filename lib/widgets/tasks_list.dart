@@ -19,7 +19,7 @@ class TasksList extends StatelessWidget {
           onDismissed: (direction) {
             value.removeTask(value.tasks[i]);
           },
-          child: TaskItem(title: value.tasks[i].task),
+          child: TaskItem(task: value.tasks[i]),
         ),
       ),
     );

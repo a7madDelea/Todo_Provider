@@ -22,4 +22,9 @@ class TaskDataProvider extends ChangeNotifier {
     tasks.remove(task);
     notifyListeners();
   }
+
+  void changeStateOfTask(Task task) {
+    task.isDone = !task.isDone;
+    notifyListeners();
+  }
 }
