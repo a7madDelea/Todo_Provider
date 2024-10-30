@@ -1,9 +1,8 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:todo/models/task.dart';
-import 'package:todo/providers/task_data_provider.dart';
+
+import '../models/task.dart';
+import '../providers/task_data_provider.dart';
 
 class AddTaskScreen extends StatelessWidget {
   const AddTaskScreen({
@@ -12,7 +11,6 @@ class AddTaskScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    log('Widget Build');
     String text = '';
     return Container(
       padding: const EdgeInsets.all(16),

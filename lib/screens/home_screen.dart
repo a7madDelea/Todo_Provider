@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/task_data_provider.dart';
-import '../widgets/task_item.dart';
+import '../widgets/tasks_list.dart';
 import 'add_task_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -34,13 +34,9 @@ class HomeScreen extends StatelessWidget {
                 style: Theme.of(context).textTheme.titleMedium,
               ),
             ),
-            Column(
-              children: value.tasks
-                  .map(
-                    (e) => TaskItem(title: e.task),
-                  )
-                  .toList(),
-            ),
+            const Expanded(
+              child: TasksList(),
+            )
           ],
         ),
       ),
@@ -57,3 +53,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
